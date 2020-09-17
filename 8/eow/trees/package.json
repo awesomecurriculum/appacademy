@@ -1,0 +1,22 @@
+{
+  "name": "eow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "GraphNode.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-spies": "^1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^8.0.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

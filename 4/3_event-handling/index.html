@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript" src="buttonwithclickcount.js"></script>
+  <script type="text/javascript" src="displaywhenchecked.js"></script>
+  <script type="text/javascript" src="forminput.js"></script>
+  <script type="text/javascript" src="eventtarget.js"></script>
+  <script type="text/javascript" src="bubbling.js"></script>
+  <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+  <button id="increment-count">I have been clicked <span id="clicked-count">0</span> times</button>
+
+  <h1>Pizza Toppings</h1>
+  <input type="checkbox" id="on-off">
+  <label for="on-off">Extra Cheese</label>
+  <!-- <div id="now-you-see-me" style="display:none">Add $1.00</div> -->
+  <div id="now-you-see-me" class="hide">Add $1.00</div>
+
+  <input id="stopper" type="text" placeholder="Quick! Type STOP">
+
+  <form class="form form-signup" id=signup-form">
+    <h2 class="form-title">An example form</h2>
+    <input class="form-field" id="name" type="text" placeholder="Name">
+    <input class="form-field" id="email" type="email" placeholder="Email">
+    <input class="form-field" id="password" type="password" placeholder="Password">
+    <input class="form-field" id="confirm-password" type="password" placeholder="Password">
+    <button class="form-submit" id="submit" type="submit">Submit</button>
+  </form>
+
+  <container id="event-target">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </container>
+</body>
+
+</html>

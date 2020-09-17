@@ -1,0 +1,31 @@
+extends layout.pug
+
+mixin ownerRow(firstName, lastName)
+  tr
+    td= owner.firstName
+    td= owner.lastName
+    td
+
+block mainContent
+  table.pure-table-striped
+    thead
+      tr
+        th First Name
+        th Last Name
+        th Pets
+      tbody
+        each owner in owners
+          //- tr
+          //-   td= owner.firstName
+          //-   td= owner.lastName
+          //-   td
+          +ownerRow(owner.firstName, owner.lastName)
+        else
+          tr
+            td(colspan=3) No owners
+  form.pure-form(method="post", action="/owners")
+    fieldset
+      legend Create an owner
+      input(type="text", name="firstName", placeholder="first name", required)
+      input(type="text", name="lastName", placeholder="last name", required)
+      button(type="submit") Create this owner

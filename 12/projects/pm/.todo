@@ -1,0 +1,36 @@
+Roles:
+  Project lead:
+  Model lead:
+  UX lead:
+
+Ideas:
+  ☐
+
+Week 1:
+  Feature list:
+  ` As a < user interested in > `
+  ` I want < to be able to > `
+  ` So that < I can > `
+    MVP:
+    Stretch:
+    Schema:
+
+Week 2:
+  Feature packets:
+    Models needed:
+    Endpoints needed:
+    Templates needed:
+    Wireframes:
+
+
+Scrum:
+  Daily standup:
+  ` Yesterday I accomplished: `
+  ` Today I will accomplish: `
+  ` Major issue I need help with: `
+  Done:
+    ☐ Designed
+    ☐ Tested
+    ☐ Built
+    ☐ Integrated
+    ☐ Documented

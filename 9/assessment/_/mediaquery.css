@@ -1,0 +1,15 @@
+/* Given the above CSS,
+write a media query that would change elements that have the tree class to widths of "100%"and display types of "block"for viewport widths less than or equal to 600px.
+ */
+
+.tree {
+  display: inline-block;
+  width: 600px;
+}
+
+@media (max-width:600px) {
+  .tree {
+    width: 100%;
+    display: block;
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript" src="./igotloaded.js"></script>
+  <script type="text/javascript" src="./yourbestfriend.js"></script>
+  <script type="text/javascript" src="./bulkaddlistitems.js"></script>
+  <script type="text/javascript" src="./countdown.js"></script>
+</head>
+
+<body>
+  <div id='catch-me-if-you-can'></div>
+  <span class='cloudy'>1</span>
+  <span class='cloudy'>2</span>
+  <span class='cloudy'>3</span>
+  <span class='cloudy'>4</span>
+  <span class='cloudy'>5</span>
+  <span class='cloudy'>6</span>
+  <span class='cloudy'>7</span>
+
+  <ul id="your-best-friend">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+  </ul>
+
+  <ul id='your-worst-enemy'></ul>
+
+</body>
+<script>
+  // get div of interest
+  const div = document.getElementById('catch-me-if-you-can');
+
+  // get elements of interest
+  const cloudySpans = document.querySelectorAll('.cloudy');
+
+  // create ids for each
+  // prepend each to target div
+
+  cloudySpans.forEach((ele, i) => {
+    ele.setAttribute('id', `cloudy-${i+1}`);
+    div.prepend(ele);
+  });
+
+  // create new div
+  // give it content
+
+  const newDiv = document.createElement('div');
+  newDiv.innerHTML = 'i\'m a new div';
+
+
+  // add before specified element
+  // for example before #cloudy-4
+
+  document.getElementById('cloudy-4').parentNode.insertBefore(newDiv, document.getElementById('cloudy-4'));
+
+  /*
+  prints:
+  765
+  i'm a new div
+  4321
+  */
+</script>
+
+</html>

@@ -1,0 +1,53 @@
+body {
+  background-color: #EFEFEF
+}
+
+fieldset {
+  background-color: white
+}
+
+.blue-box {
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  background-color: blue;
+}
+
+.orange-box {
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  background-color: orange;
+  order: -1;
+}
+
+.outer-layer-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.outer-layer-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.outer-layer-4>p+p {
+  color: orange;
+}
+
+.inner-layer-5 {
+  grid-column: 2 / span 6;
+}
+
+.outer-layer-6 {
+  box-shadow: 0 0 4px 0, rgba(0, 0, 255, .6);
+}
+
+.outer-layer-7 {
+  overflow: scroll;
+}
+
+.uppercase.bold {
+  font-family: Courier New;
+}

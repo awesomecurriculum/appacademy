@@ -1,0 +1,53 @@
+const dash = require('dashdash');
+const fetch = require('node-fetch');
+const fs = require('fs');
+
+const options = {
+  allowUnknown: true,
+  options: [{
+    names: ['output', 'o'],
+    type: 'string',
+    help: 'file in which to store the fetched content'
+  },
+  {
+    names: ['header', 'H'],
+    type: 'string',
+    help: 'parameter to set on header request'
+  }]
+};
+
+const parser = dash.createParser(options);
+
+const opts = parser.parse(options);
+
+const url = opts._args[0];
+
+const header = opts.header.split(': ');
+const headerName = header[0];
+const headerVal = header[1];
+
+const path = opts.output;
+
+  let myHeaders = new fetch.Headers();
+  myHeaders.append(headerName, headerVal);
+
+  const myInit = {
+    method: 'GET',
+    headers: myHeaders,
+    mode: 'cors',
+    cache: 'default'
+  };
+
+  fetch(url, myInit)
+  .then((res) => res.text())
+  .then((txt) => {
+    if (path) {
+      fs.writeFile(path, txt, err => {
+        if (err) console.log(err);
+      })
+    }
+    console.log(txt);
+  })
+  .catch((reason) => {
+    console.log(reason.message);
+  })
